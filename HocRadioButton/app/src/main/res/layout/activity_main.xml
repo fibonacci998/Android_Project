@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tuans.hocradiobutton.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="328dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Mời bạn đánh giá hệ thống học tập:"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <RadioGroup
+        android:layout_width="233dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="71dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:id="@+id/radioGroup"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <RadioButton
+            android:id="@+id/radRatTuyetVoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rất tuyệt vời" />
+
+        <RadioButton
+            android:id="@+id/radTuyetVoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuyệt vời" />
+
+        <RadioButton
+            android:id="@+id/radTamChapNhan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tạm chấp nhận" />
+
+        <RadioButton
+            android:id="@+id/radKhongTot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Không tốt lắm" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnBinhChon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="74dp"
+        android:text="bình chọn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</android.support.constraint.ConstraintLayout>

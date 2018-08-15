@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tuans.hocdatetimepicker.MainActivity">
+
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="4dp"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="47dp">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="0.62"
+            android:gravity="center_vertical|center"
+            android:text="29/02/2016"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnDate"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/data" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="92dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="5dp">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.60"
+            android:gravity="center"
+            android:text="11:02"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="normal|bold" />
+
+        <ImageButton
+            android:id="@+id/btnTime"
+            android:layout_width="56dp"
+            android:layout_height="49dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/oclock" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

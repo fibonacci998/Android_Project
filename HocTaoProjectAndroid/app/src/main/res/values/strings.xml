@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HocTaoProjectAndroid</string>
+    <string-array name="arrThu">
+        <item>thu2</item>
+        <item>thu3</item>
+    </string-array>
+</resources>
