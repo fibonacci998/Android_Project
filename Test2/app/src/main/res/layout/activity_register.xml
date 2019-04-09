@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerAct">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="WELCOME TO FPT SHARED CAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="Register for new account " />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="202dp"
+        android:layout_toStartOf="@+id/textView6"
+        android:text="Staff Name(*)"
+        android:layout_toLeftOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="148dp"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="Staff ID(*)" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_centerVertical="true"
+        android:text="Password(*)"
+        android:layout_alignLeft="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginBottom="141dp"
+        android:text="Company"
+        android:layout_alignLeft="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginBottom="204dp"
+        android:text="Mobile Phone(*)" />
+
+    <EditText
+        android:id="@+id/etPass2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etStaffId2"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_marginTop="-25dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignLeft="@+id/etStaffId2" />
+
+    <EditText
+        android:id="@+id/etPhone2"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignStart="@+id/etPass2"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etCompany2"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etPass2"
+        android:layout_alignTop="@+id/textView9"
+        android:layout_marginTop="-25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/etPass2" />
+
+    <EditText
+        android:id="@+id/etStaffId2"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="-25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="31dp" />
+
+    <EditText
+        android:id="@+id/etStaffName2"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etStaffId2"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_marginTop="-24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/etStaffId2" />
+
+    <Button
+        android:id="@+id/recoveryButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/recoveryButton2"
+        android:layout_marginEnd="54dp"
+        android:text="Recovery account"
+        tools:ignore="DuplicateIds,NotSibling"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="54dp" />
+
+    <Button
+        android:id="@+id/recoveryButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginStart="50dp"
+        android:text="Register"
+        tools:ignore="DuplicateIds"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp" />
+</RelativeLayout>
