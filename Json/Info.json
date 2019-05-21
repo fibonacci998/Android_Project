@@ -1,0 +1,8 @@
+{
+    "name":"tuan",
+    "age":22,
+    "language":["android","java","c"],
+    "jobs":[{"Place":"NYC","Title":"developer"}
+            {"Place":"CA","Title":"tester"},
+            {"Place":"FL","Title":"manager"}]
+}

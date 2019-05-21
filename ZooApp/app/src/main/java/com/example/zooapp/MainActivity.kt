@@ -1,8 +1,11 @@
 package com.example.zooapp
 
+import android.bluetooth.BluetoothAdapter
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat.startActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,13 +32,24 @@ class MainActivity : AppCompatActivity() {
         adapter = AnimalsAdapter(this, listOfAnimals)
         lvListAnimal.adapter = adapter
     }
-    class AnimalsAdapter:BaseAdapter{
+
+    fun delete(index: Int){
+        listOfAnimals.removeAt(index)
+        adapter!!.notifyDataSetChanged()
+
+    }
+    fun add(index: Int){
+        listOfAnimals.add(listOfAnimals[index])
+        adapter!!.notifyDataSetChanged()
+    }
+    inner class AnimalsAdapter:BaseAdapter{
         var listOfAnimals = ArrayList<Animal>()
         var context:Context?=null
         constructor(context:Context,listOfAnimals: ArrayList<Animal>):super(){
             this.listOfAnimals=listOfAnimals
             this.context= context
         }
+
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val animal = listOfAnimals[position]
             if (animal.isKilled==true){
@@ -44,6 +58,14 @@ class MainActivity : AppCompatActivity() {
                 myView.tvName.text = animal.name!!
                 myView.tvDes.text = animal.des!!
                 myView.ivAnimal.setImageResource(animal.image!!)
+                myView.ivAnimal.setOnClickListener{
+//                    val intent = Intent(context,AnimalInfo::class.java)
+//                    intent.putExtra("name",animal.name)
+//                    intent.putExtra("des",animal.des)
+//                    intent.putExtra("image",animal.image!!)
+//                    context!!.startActivity(intent)
+                    delete(position)
+                }
                 return myView
             }else{
                 var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -51,6 +73,13 @@ class MainActivity : AppCompatActivity() {
                 myView.tvName.text = animal.name!!
                 myView.tvDes.text = animal.des!!
                 myView.ivAnimal.setImageResource(animal.image!!)
+                myView.ivAnimal.setOnClickListener{
+                    val intent = Intent(context,AnimalInfo::class.java)
+                    intent.putExtra("name",animal.name)
+                    intent.putExtra("des",animal.des)
+                    intent.putExtra("image",animal.image!!)
+                    context!!.startActivity(intent)
+                }
                 return myView
             }
         }

@@ -1,0 +1,21 @@
+<name>tuan</name>
+<age></age>
+<language>
+    <item>android</item>
+    <item>java</item>
+    <item>c</item>
+</language>
+<job>
+    <item>
+        <title>developer</title>
+        <place>NY</place>
+    </item>
+    <item>
+        <title>tester</title>
+        <place>CA</place>
+    </item>
+    <item>
+        <title>manager</title>
+        <place>FL</place>
+    </item>
+</job>

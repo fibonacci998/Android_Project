@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ex1</string>
+    <string name="name_label">Name</string>
+    <string name="phone_label">Phone</string>
+    <string name="gender_label">Gender</string>
+    <string name="gender_male_label">Male</string>
+    <string name="gender_female_label">Female</string>
+    <string name="title">Enter your information</string>
+    <string name="submit_label">Submit</string>
+    <string name="show_infor_label">Your submit information</string>
+    <string name="show_infor_button">Show information</string>
+</resources>
