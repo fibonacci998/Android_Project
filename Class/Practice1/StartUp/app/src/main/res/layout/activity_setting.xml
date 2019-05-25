@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.startup.Setting">
+
+    <RadioGroup
+        android:id="@+id/rgChoose"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rdRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/rdGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Green" />
+
+        <RadioButton
+            android:id="@+id/rdBlue"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Blue" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="38dp"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="@+id/rgChoose"
+        app:layout_constraintTop_toBottomOf="@+id/rgChoose" />
+</android.support.constraint.ConstraintLayout>
