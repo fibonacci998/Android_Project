@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/imageView"
+        android:gravity="center"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/txtName"
+        android:text="Call" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtName"
+        android:layout_toRightOf="@+id/imageView"
+        android:gravity="center|left"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnCall"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txtAddress"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnCall"
+        android:layout_toRightOf="@+id/btnEdit"
+        android:text="Delete" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/avartar4"
+        tools:srcCompat="@tools:sample/avatars" />
+</RelativeLayout>
