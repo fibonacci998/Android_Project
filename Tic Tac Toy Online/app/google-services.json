@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "81357256520",
+    "firebase_url": "https://tic-tac-toy-online-6f21f.firebaseio.com",
+    "project_id": "tic-tac-toy-online-6f21f",
+    "storage_bucket": "tic-tac-toy-online-6f21f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81357256520:android:81c6e058b8e60835",
+        "android_client_info": {
+          "package_name": "com.example.tuans.tictactoyonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81357256520-eqg6h5a6qve08ejhiue9nc1er3r8k1p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuans.tictactoyonline",
+            "certificate_hash": "1be9c2919e3ef6a54b223eedc814d757b2c03902"
+          }
+        },
+        {
+          "client_id": "81357256520-jsc8b6gug5tbrso1r41o53uld12gvb45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE4yZhN8pCJ_XM8cjxnHbmfG-3wgnlvT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81357256520-jsc8b6gug5tbrso1r41o53uld12gvb45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
