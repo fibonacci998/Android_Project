@@ -27,6 +27,7 @@ public class PersonAdapter extends BaseAdapter {
         this.list = list;
         this.myHelper = myHelper;
         this.db = db;
+
     }
 
     @Override
@@ -62,6 +63,7 @@ public class PersonAdapter extends BaseAdapter {
             btnDelete = (Button)convertView.getTag(R.id.btnDelete);
             btnEdit = (Button)convertView.getTag(R.id.btnEdit);
         }
+        activity.registerForContextMenu(txtName);
         Person person = list.get(position);
         txtName.setText(person.getName());
         btnEdit.setOnClickListener(new View.OnClickListener() {
