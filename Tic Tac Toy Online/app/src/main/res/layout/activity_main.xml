@@ -17,7 +17,7 @@
                 android:inputType="textPersonName"
                 android:hint="Email"
                 android:ems="10"
-                android:id="@+id/editText" android:layout_weight="1"/>
+                android:id="@+id/etEmailRequest" android:layout_weight="1"/>
         <Button
                 android:text="Request"
                 android:layout_marginLeft="3pt"

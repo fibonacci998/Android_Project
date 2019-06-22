@@ -23,7 +23,7 @@ class Login : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
     }
     fun btLoginEvent(view:View){
-        LoginToFireBase(etEmail.text.toString(),etPassword.text.toString())
+        LoginToFireBase(etEmailRequest.text.toString(),etPassword.text.toString())
     }
     fun LoginToFireBase(email:String, password:String){
         mAuth!!.createUserWithEmailAndPassword(email,password)
@@ -34,7 +34,7 @@ class Login : AppCompatActivity() {
                         var currentUser=mAuth!!.currentUser
                         //save in database
                         if (currentUser!=null){
-                            myRef.child("Users").child(SplitString(currentUser.email.toString())).setValue(currentUser.uid)
+                            myRef.child("Users").child(SplitString(currentUser.email.toString())).child("Request").setValue(currentUser.uid)
                         }
 
                         LoadMain()

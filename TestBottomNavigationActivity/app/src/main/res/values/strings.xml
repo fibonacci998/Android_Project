@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestBottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="key_google_api" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyCBN3OaAjaZaI-MCvqcNFlIKGbnV76Ay3c
+    </string>
+</resources>

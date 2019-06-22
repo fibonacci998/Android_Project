@@ -66,6 +66,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
         }
     }
+
     fun checkPermision(){
         if (Build.VERSION.SDK_INT>=23){
             if (ActivityCompat.checkSelfPermission(this,
@@ -85,6 +86,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         var locationManager=getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3, 3f, myLocation)
+
+        Toast.makeText(this,"get address success",Toast.LENGTH_LONG).show()
 
         var myThread=myThread()
         myThread.start()
@@ -127,6 +130,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             location!!.longitude=0.0;
         }
         override fun onLocationChanged(p: Location?) {
+
             location=p
         }
 
@@ -165,23 +169,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         mMap.addMarker(MarkerOptions().position(sydney).title("Me").snippet(" here us my location").
                             icon(BitmapDescriptorFactory.fromResource(R.drawable.mario)))
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,14f))
-                        for (i in 0..listPockemon.size-1){
-                            var newPockemon=listPockemon.get(i)
-                            if (newPockemon.isCatch==false){
-                                val pokemonLoc = LatLng(newPockemon.location!!.latitude, newPockemon.location!!.longitude)
-                                mMap.addMarker(MarkerOptions().position(pokemonLoc).title(newPockemon.name)
-                                    .snippet(newPockemon.des+", power:"+newPockemon.power).
-                                    icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
-                                if (location!!.distanceTo(newPockemon.location)<2){
-                                    newPockemon.isCatch=true
-                                    listPockemon[i]=newPockemon
-                                    playerPower+=newPockemon.power!!
-                                    Toast.makeText(applicationContext,
-                                        "You catch new pockemin, your new power is "+playerPower,
-                                        Toast.LENGTH_LONG).show()
-                                }
-                            }
-                        }
+//                        for (i in 0..listPockemon.size-1){
+//                            var newPockemon=listPockemon.get(i)
+//                            if (newPockemon.isCatch==false){
+//                                val pokemonLoc = LatLng(newPockemon.location!!.latitude, newPockemon.location!!.longitude)
+//                                mMap.addMarker(MarkerOptions().position(pokemonLoc).title(newPockemon.name)
+//                                    .snippet(newPockemon.des+", power:"+newPockemon.power).
+//                                    icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
+//                                if (location!!.distanceTo(newPockemon.location)<2){
+//                                    newPockemon.isCatch=true
+//                                    listPockemon[i]=newPockemon
+//                                    playerPower+=newPockemon.power!!
+//                                    Toast.makeText(applicationContext,
+//                                        "You catch new pockemin, your new power is "+playerPower,
+//                                        Toast.LENGTH_LONG).show()
+//                                }
+//                            }
+//                        }
                     }
                     Thread.sleep(1000)
                 }catch (ex:Exception){
