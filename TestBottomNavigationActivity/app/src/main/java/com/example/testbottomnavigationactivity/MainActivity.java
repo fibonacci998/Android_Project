@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 implements BottomNavigationView.OnNavigationItemSelectedListener {
-
     private boolean loadFragment(Fragment fragment){
         if (fragment!=null){
             getSupportFragmentManager()
@@ -21,6 +20,7 @@ implements BottomNavigationView.OnNavigationItemSelectedListener {
         }
         return false;
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment = null;

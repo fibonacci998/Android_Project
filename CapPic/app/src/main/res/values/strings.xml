@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CapPic</string>
+    <string name="title_home">Leaderboard</string>
+    <string name="title_dashboard">Map</string>
+    <string name="title_notifications">Social</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
