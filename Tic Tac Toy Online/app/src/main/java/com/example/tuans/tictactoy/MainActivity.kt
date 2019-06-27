@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         PlayerOnline(SplitString(myEmail!!)+SplitString(userDemail))
         PlayerSymbol="X"
     }
-    fun  btAcceptEvent(view:View){
+    fun btAcceptEvent(view:View){
         var userDemail = etEmailRequest.text.toString()
         myRef.child("Users").child(SplitString(userDemail)).child("Request").push().setValue(myEmail)
         PlayerOnline(SplitString(userDemail)+SplitString(myEmail!!))

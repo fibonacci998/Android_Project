@@ -169,23 +169,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         mMap.addMarker(MarkerOptions().position(sydney).title("Me").snippet(" here us my location").
                             icon(BitmapDescriptorFactory.fromResource(R.drawable.mario)))
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,14f))
-//                        for (i in 0..listPockemon.size-1){
-//                            var newPockemon=listPockemon.get(i)
-//                            if (newPockemon.isCatch==false){
-//                                val pokemonLoc = LatLng(newPockemon.location!!.latitude, newPockemon.location!!.longitude)
-//                                mMap.addMarker(MarkerOptions().position(pokemonLoc).title(newPockemon.name)
-//                                    .snippet(newPockemon.des+", power:"+newPockemon.power).
-//                                    icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
-//                                if (location!!.distanceTo(newPockemon.location)<2){
-//                                    newPockemon.isCatch=true
-//                                    listPockemon[i]=newPockemon
-//                                    playerPower+=newPockemon.power!!
-//                                    Toast.makeText(applicationContext,
-//                                        "You catch new pockemin, your new power is "+playerPower,
-//                                        Toast.LENGTH_LONG).show()
-//                                }
-//                            }
-//                        }
+                        for (i in 0..listPockemon.size-1){
+                            var newPockemon=listPockemon.get(i)
+                            if (newPockemon.isCatch==false){
+                                val pokemonLoc = LatLng(newPockemon.location!!.latitude, newPockemon.location!!.longitude)
+                                mMap.addMarker(MarkerOptions().position(pokemonLoc).title(newPockemon.name)
+                                    .snippet(newPockemon.des+", power:"+newPockemon.power).
+                                    icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
+                                if (location!!.distanceTo(newPockemon.location)<2){
+                                    newPockemon.isCatch=true
+                                    listPockemon[i]=newPockemon
+                                    playerPower+=newPockemon.power!!
+                                    Toast.makeText(applicationContext,
+                                        "You catch new pockemin, your new power is "+playerPower,
+                                        Toast.LENGTH_LONG).show()
+                                }
+                            }
+                        }
                     }
                     Thread.sleep(1000)
                 }catch (ex:Exception){
