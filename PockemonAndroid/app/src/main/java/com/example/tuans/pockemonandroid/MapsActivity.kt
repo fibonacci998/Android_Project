@@ -177,6 +177,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                     .snippet(newPockemon.des+", power:"+newPockemon.power).
                                     icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
                                 if (location!!.distanceTo(newPockemon.location)<2){
+
                                     newPockemon.isCatch=true
                                     listPockemon[i]=newPockemon
                                     playerPower+=newPockemon.power!!
